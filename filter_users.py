@@ -1,7 +1,7 @@
 import json
 
-
 def filter_users_by_name(name):
+    """filtering the database by name"""
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -12,6 +12,7 @@ def filter_users_by_name(name):
 
 
 def filter_by_age(age):
+    """filtering the database by age"""
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -22,6 +23,7 @@ def filter_by_age(age):
 
 
 def filter_by_email(email):
+    """filtering the database by email"""
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -29,6 +31,7 @@ def filter_by_email(email):
 
     for user in filtered_users:
         print(user)
+
 
 if __name__ == "__main__":
     filter_option = input("What would you like to filter by? (Name, age or email?): ").strip().lower()
